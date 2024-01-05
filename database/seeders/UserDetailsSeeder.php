@@ -16,7 +16,7 @@ class UserDetailsSeeder extends Seeder
         UserDetails::create([
             'name' => 'Gibran',
             'fullname' => 'Gibran Abyan Rifai',
-            'email' => 'gibran@gmail.com',
+            'email' => 'gibranabyan082@gmail.com',
             'phone' => '085335497801',
             'address' => 'Yogyakarta',
             'university' => 'Universitas Negeri Yogyakarta',

@@ -29,9 +29,9 @@ Route::get('/forgot', function () {
     return view('auth.forgot');
 })->name('forgot');
 
-Route::get('/reset', function () {
-    return view('auth.reset');
-})->name('reset');
+Route::get('/reset/{token}', function ($token) {
+    return view('auth.reset', ['token' => $token]);
+})->name('forgot.password');
 
 Route::get('/index', function () {
     return view('users.dashboard');
@@ -40,8 +40,8 @@ Route::get('/index', function () {
 Route::controller(ForgotPasswordController::class)->group(function () {
     Route::get('/forgotPassword', 'showForm')->name('forgot.password');
     Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
+    Route::post('/reset', 'reset')->name('reset.password');
 });
-
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
