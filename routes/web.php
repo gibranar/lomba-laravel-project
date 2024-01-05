@@ -45,6 +45,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::controller(UserController::class)->group(function () {
     Route::get('/login', 'showLoginForm')->name('login');
+    Route::post('/register', 'store')->name('users.store');
 });
 
 Route::get('/index', function () {

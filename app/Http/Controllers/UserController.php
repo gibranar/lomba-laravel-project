@@ -1,9 +1,12 @@
-<?php  
+<?php
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\UserDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -12,22 +15,39 @@ class UserController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
+    public function store(Request $request)
     {
-        $credentials = $request->validate([
+        $credential = $request->validate([
+            'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->route('dashboard');
+        $userExisted = User::where('email', $credential['email'])->first();
+
+        if ($userExisted) {
+            return redirect()->back()->withInput()->withErrors(['email' => 'Email is already taken.']);
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+        $user = User::create([
+            'name' => $credential['name'],
+            'email' => $credential['email'],
+            'password' => Hash::make($credential['password']),
         ]);
+
+        $userDetails = UserDetails::create([
+            'name' => $user->name,
+            'email' => $user->email,
+        ]);
+
+        $user->userDetails()->save($userDetails);
+
+        return redirect()->route('login')->with('success', 'User created successfully');
+
+        if (Auth::attempt(!$credential)) {
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
+        }
     }
 }
-
-?>

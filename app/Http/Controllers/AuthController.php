@@ -21,7 +21,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/index');
+            return redirect('/index')->with('loginSuccess', 'Login Success');
         }
 
         return back()->withErrors([
