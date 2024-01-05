@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ForgotPasswordController;
 use PHPUnit\Framework\Attributes\Group;
 
 /*
@@ -35,6 +36,11 @@ Route::get('/reset', function () {
 Route::get('/index', function () {
     return view('users.dashboard');
 })->name('index');
+
+Route::controller(ForgotPasswordController::class)->group(function () {
+    Route::get('/forgotPassword', 'showForm')->name('forgot.password');
+    Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
+});
 
 
 Route::controller(AuthController::class)->group(function () {

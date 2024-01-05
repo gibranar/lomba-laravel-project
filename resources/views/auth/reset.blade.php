@@ -21,6 +21,7 @@
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Reset Password</h1>
 							<form method="" action="{{ route('login') }}" class="needs-validation" novalidate="" autocomplete="off">
+								@csrf
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="password">Recent Password</label>
 									<input id="password" type="password" class="form-control" name="password" value="" required autofocus>
