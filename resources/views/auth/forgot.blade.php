@@ -18,9 +18,9 @@
 						<img src="https://lomba.uny.ac.id/lip3d/lip3d-nobg.png" alt="logo" width="100">
 					</div>
 					<div class="card shadow-lg">
-						<div class="card-body p-5">
+						<div class="card-body p-5" id="inputEmail">
 							<h1 class="fs-4 card-title fw-bold mb-4">Forgot Password</h1>
-							<form method="" action="{{ route('reset') }}" class="needs-validation" novalidate="" autocomplete="off">
+							{{-- <form method="" action="{{ route('reset') }}" class="needs-validation" novalidate="" autocomplete="off"> --}}
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">E-Mail Address</label>
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
@@ -30,11 +30,14 @@
 								</div>
 
 								<div class="d-flex align-items-center">
-									<button type="submit" class="btn btn-primary ms-auto">
+									<button type="submit" class="btn btn-primary ms-auto" id="submit">
 										Send Link	
 									</button>
 								</div>
 							</form>
+						</div>
+						<div class="d-flex justify-content-center w-100" id="info" style="visibility: hidden; max-height: 0;">
+							<h2 class="fs-5">Click a link on your email</h2>
 						</div>
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
@@ -51,5 +54,17 @@
 	</section>
 
 	<script src="js/login.js"></script>
+	<script>
+		const inputEmail = document.getElementById('inputEmail');
+		const info = document.getElementById('info');
+		const submit = document.getElementById('submit');
+
+		submit.addEventListener('click', function() {
+			inputEmail.style.display = 'none';
+
+			info.style.visibility = 'visible';
+			info.style.padding = '2rem';
+		});
+	</script>
 </body>
 </html>
