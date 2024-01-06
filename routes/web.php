@@ -37,6 +37,10 @@ Route::get('/index', function () {
     return view('users.dashboard');
 })->name('index');
 
+Route::get('/landing', function () {
+    return view('users.landing');
+}); 
+
 Route::controller(ForgotPasswordController::class)->group(function () {
     Route::get('/forgotPassword', 'showForm')->name('forgot.password');
     Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
