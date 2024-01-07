@@ -53,10 +53,6 @@ Route::get('/team', function () {
 // USERS ROUTE END
 
 
-Route::get('/landing', function () {
-    return view('users.landing');
-}); 
-
 Route::controller(ForgotPasswordController::class)->group(function () {
     Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
     Route::post('/reset', 'reset')->name('reset.password');
