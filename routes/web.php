@@ -33,12 +33,27 @@ Route::get('/reset/{token}', function ($token) {
     return view('auth.reset', ['token' => $token]);
 })->name('forgot.password');
 
-Route::get('/index', function () {
+
+// USERS ROUTE START
+Route::get('/dashboard', function () {
     return view('users.dashboard');
-})->name('index');
+})->name('users.dashboard')->middleware('auth');
+
+Route::get('/pt', function () {
+    return view('users.perguruan_tinggi');
+})->name('users.pt')->middleware('auth');
+
+Route::get('/profile', function () {
+    return view('users.profile');
+})->name('users.profile')->middleware('auth');
+
+Route::get('/team', function () {
+    return view('users.team');
+})->name('users.team')->middleware('auth');
+// USERS ROUTE END
+
 
 Route::controller(ForgotPasswordController::class)->group(function () {
-    Route::get('/forgotPassword', 'showForm')->name('forgot.password');
     Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
     Route::post('/reset', 'reset')->name('reset.password');
 });
@@ -53,7 +68,3 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/login', 'showLoginForm')->name('login');
     Route::post('/register', 'store')->name('users.store');
 });
-
-Route::get('/index', function () {
-    return view('users.dashboard');
-})->name('index')->middleware('auth');

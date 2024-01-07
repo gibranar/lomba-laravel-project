@@ -9,7 +9,7 @@
     <meta name="description" content="Peserta LIP3D UNY">
 
     <link rel="shortcut icon" href="https://lomba.uny.ac.id/lip3d/favicon-lip3d-2023.jpg">
-    <title> Manajemen Tim
+    <title>Data Ketua
         || Peserta LIP3D #2</title>
     <link rel="stylesheet" href="https://lomba.uny.ac.id/lip3d/dashboard/css/dashlite.css?ver=3.1.2">
     <link id="skin-default" rel="stylesheet" href="https://lomba.uny.ac.id/lip3d/dashboard/css/theme.css?ver=3.1.2">
@@ -357,301 +357,139 @@
                                     <div class="nk-block nk-block-lg">
                                         <div class="nk-block-head">
                                             <div class="nk-block-head-content">
-                                                <h4 class="title nk-block-title">List Data Tim</h4>
+                                                <h4 class="title nk-block-title">Data Ketua</h4>
                                                 <div class="nk-block-des">
                                                     <p>Lengkapi data berikut untuk melanjutkan proses</p>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row g-gs">
-                                            <div class="col-lg-12">
+                                            <div class="col-lg-8">
                                                 <div class="card">
                                                     <div class="card-inner">
                                                         <div class="card-head">
-                                                            <h5 class="card-title">List Tim</h5>
-                                                            <div class="card-header-action">
-                                                                <button type="button" class="btn btn-outline-success"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#modalDefault"><i
-                                                                        class="fa-solid fa-download"></i>
-                                                                    Buat Tim
-                                                                </button>
-                                                            </div>
+                                                            <h5 class="card-title">Data Ketua</h5>
                                                         </div>
-                                                        <div class="card-inner">
-                                                            <table class="table">
-                                                                <thead style="background-color: #d6f0cc">
-                                                                    <tr>
-                                                                        <th scope="col">#</th>
-                                                                        <th scope="col">Judul Proposal</th>
-                                                                        <th scope="col">Aksi</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="modal fade " tabindex="-1" id="modalDefault" style="display: none;"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-top modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Buat Tim</h5><a href="#" class="close"
-                                                    data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a>
-                                            </div>
-                                            <form action="" method=""
-                                                enctype="multipart/form-data" class="form-validate is-alter"
-                                                novalidate="novalidate">
-                                                <div class="modal-body">
-                                                    <input type="hidden" name="_token"
-                                                        value="FWM2JpUt5w80FW3rPEQnwXppJy7efO0zmTxGEfRm">
-                                                    <div class="row gy-2">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="full-name">Judul
-                                                                    Proposal<span style="color: red">*</span></label>
-                                                                <div class="form-control-wrap"><input type="text"
-                                                                        name="judul_usaha" class="form-control"
-                                                                        id="full-name" required=""></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="phone-no">Kategori
-                                                                    Lomba<span style="color: red">*</span></label>
-                                                                <div class="form-control-wrap">
-                                                                    <select class="form-control" name="category_id"
-                                                                        id="default-06" required="">
-                                                                        <option value="">Pilih Kategori</option>
-                                                                        <option value="1">Pemberdayaan Disabilitas
-                                                                            (PDS)
-                                                                        </option>
-                                                                        <option value="2">Pemberdayaan Perempuan
-                                                                            (PDP)
-                                                                        </option>
-                                                                        <option value="3">Industri dan Ekonomi
-                                                                            Kreatif (IEK)
-                                                                        </option>
-                                                                        <option value="4">Mitigasi Bencana (MBC)
-                                                                        </option>
-                                                                        <option value="5">Teknologi Ramah
-                                                                            Lingkungan (TRL)
-                                                                        </option>
-                                                                        <option value="6">Budidaya (BUD)
-                                                                        </option>
-                                                                        <option value="7">Ketahanan Pangan (KTP)
-                                                                        </option>
-                                                                        <option value="8">Konservasi Sumber Daya
-                                                                            Alam (SDA)
-                                                                        </option>
-                                                                        <option value="9">Kesehatan Masyarakat
-                                                                            (KSM)
-                                                                        </option>
-                                                                        <option value="10">Pendidikan (PEN)
-                                                                        </option>
-                                                                        <option value="11">Seni Budaya (SBD)
-                                                                        </option>
-                                                                        <option value="12">Pariwisata (PAR)
-                                                                        </option>
-                                                                        <option value="13">Kuliner Khas Daerah
-                                                                            (KUL)
-                                                                        </option>
-                                                                        <option value="14">Konservasi Tanaman Obat
-                                                                            Keluarga (TOG)
-                                                                        </option>
-                                                                        <option value="15">Pengentasan Kemiskinan
-                                                                            (PKM)
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="link_karya">Link Video
-                                                                    (youtube)</label>
-                                                                <div class="form-control-wrap"><input type="text"
-                                                                        name="link_karya"
-                                                                        placeholder="contoh shortlink : youtu.be/abcde"
-                                                                        class="form-control" id="link_karya"></div>
-                                                            </div>
-                                                        </div>
-                                                        <hr style="opacity:0; width:0%">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="dokumen_profil">Dokumen
-                                                                    Proposal<span style="color: red">*</span></label>
-                                                                <div class="input-group">
-                                                                    <div class="form-file"><input type="file"
-                                                                            name="dokumen_profil" accept=".pdf"
-                                                                            class="form-file-input"
-                                                                            id="dokumen_profil" required="">
-                                                                        <label class="form-file-label"
-                                                                            for="dokumen_profil">Upload</label>
-                                                                    </div> <br>
-                                                                </div>
-                                                                <small><span style="color: red">Unggah file pdf
-                                                                        maksimum 10MB</span></small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="file_ktm">File KTM
-                                                                    Ketua dan Anggota<span
-                                                                        style="color: red">*</span></label>
-                                                                <div class="input-group">
-                                                                    <div class="form-file"><input type="file"
-                                                                            name="file_ktm" accept=".pdf"
-                                                                            class="form-file-input" id="file_ktm"
-                                                                            required="">
-                                                                        <label class="form-file-label"
-                                                                            for="file_ktm">Upload</label>
-                                                                    </div> <br>
-                                                                </div>
-                                                                <small><span style="color: red">Unggah file pdf
-                                                                        maksimum 10MB</span></small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="file_krs">File KRS
-                                                                    Ketua dan Anggota<span
-                                                                        style="color: red">*</span></label>
-                                                                <div class="input-group">
-                                                                    <div class="form-file"><input type="file"
-                                                                            name="file_krs" accept=".pdf"
-                                                                            class="form-file-input" id="file_krs"
-                                                                            required="">
-                                                                        <label class="form-file-label"
-                                                                            for="file_krs">Upload</label>
-                                                                    </div> <br>
-                                                                </div>
-                                                                <small><span style="color: red">Unggah file pdf
-                                                                        maksimum 10MB</span></small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label"
-                                                                    for="file_pernyataan_orisinalitas">Surat
-                                                                    Orisinalitas Karya<span
-                                                                        style="color: red">*</span></label>
-                                                                <div class="input-group">
-                                                                    <div class="form-file"><input type="file"
-                                                                            name="file_pernyataan_orisinalitas"
-                                                                            accept=".pdf" class="form-file-input"
-                                                                            id="file_pernyataan_orisinalitas"
-                                                                            required="">
-                                                                        <label class="form-file-label"
-                                                                            for="file_pernyataan_orisinalitas">Upload</label>
-                                                                    </div> <br>
-                                                                </div>
-                                                                <small><span style="color: red">Unggah file pdf
-                                                                        maksimum 2MB</span></small>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="nama_ukm">Nama
-                                                                    UKM/ORMAWA<span style="color: red">*</span></label>
-                                                                <div class="form-control-wrap"><input type="text"
-                                                                        name="nama_ukm" class="form-control"
-                                                                        id="nama_ukm" required=""></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="email_ukm">Email
-                                                                    UKM/ORMAWA<span style="color: red">*</span></label>
-                                                                <div class="form-control-wrap"><input type="text"
-                                                                        name="email_ukm" class="form-control"
-                                                                        id="email_ukm" required=""></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="tingkat_ukm">Tingkat
-                                                                    UKM/ORMAWA<span style="color: red">*</span></label>
-                                                                <div class="form-control-wrap">
-                                                                    <select
-                                                                        class="form-select js-select2 select2-hidden-accessible"
-                                                                        name="tingkat_ukm" tabindex="-1"
-                                                                        aria-hidden="true" required=""
-                                                                        data-select2-id="1">
-                                                                        <option data-select2-id="3">Pilih Tingkatan UKM
-                                                                            Berikut!</option>
-                                                                        <option value="prodi">Program Studi</option>
-                                                                        <option value="fakultas">Fakultas</option>
-                                                                        <option value="universitas">Universitas
-                                                                        </option>
-                                                                    </select><span
-                                                                        class="select2 select2-container select2-container--default"
-                                                                        dir="ltr" data-select2-id="2"
-                                                                        style="width: 1px;"><span
-                                                                            class="selection"><span
-                                                                                class="select2-selection select2-selection--single"
-                                                                                role="combobox" aria-haspopup="true"
-                                                                                aria-expanded="false" tabindex="-1"
-                                                                                aria-disabled="false"
-                                                                                aria-labelledby="select2-tingkat_ukm-72-container"><span
-                                                                                    class="select2-selection__rendered"
-                                                                                    id="select2-tingkat_ukm-72-container"
-                                                                                    role="textbox"
-                                                                                    aria-readonly="true"
-                                                                                    title="Pilih Tingkatan UKM Berikut!">Pilih
-                                                                                    Tingkatan UKM Berikut!</span><span
-                                                                                    class="select2-selection__arrow"
-                                                                                    role="presentation"><b
-                                                                                        role="presentation"></b></span></span></span><span
-                                                                            class="dropdown-wrapper"
-                                                                            aria-hidden="true"></span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="file_anggota_ukm">Surat
-                                                                    Keterangan Keikutsertaan UKM/ORMAWA<span
-                                                                        style="color: red">*</span></label>
-                                                                <div class="input-group">
-                                                                    <div class="form-file"><input type="file"
-                                                                            name="file_anggota_ukm" accept=".pdf"
-                                                                            class="form-file-input"
-                                                                            id="file_anggota_ukm" required="">
-                                                                        <label class="form-file-label"
-                                                                            for="file_anggota_ukm">Upload</label>
+                                                        <form action=""
+                                                            enctype="multipart/form-data" method="">
+                                                            <input type="hidden" name="_token"
+                                                                value="FWM2JpUt5w80FW3rPEQnwXppJy7efO0zmTxGEfRm">
+                                                            <div class="row g-4">
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="full-name-1">Nama Ketua<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text" value="Admin LIP3D"
+                                                                                class="form-control" id="full-name-1"
+                                                                                disabled="">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <small><span style="color: red">Unggah file pdf
-                                                                        maksimum 2MB</span></small>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="email-address-1">NIM Ketua<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text" value="123456789"
+                                                                                class="form-control"
+                                                                                id="email-address-1" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="pay-amount-1">Email<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text"
+                                                                                value="lip3d@uny.ac.id"
+                                                                                class="form-control" id="pay-amount-1"
+                                                                                disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="pay-amount-1">No. WhatsApp<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text" name="phone"
+                                                                                value="123456789" class="form-control"
+                                                                                id="pay-amount-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="phone-no-1">Program Studi<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text" name="prodi"
+                                                                                value=""
+                                                                                placeholder="Pendidikan Administrasi Perkantoran - S1"
+                                                                                class="form-control" id="phone-no-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label"
+                                                                            for="pay-amount-1">Fakultas<span
+                                                                                style="color: red">*</span></label>
+                                                                        <div class="form-control-wrap">
+                                                                            <input type="text" name="fakultas"
+                                                                                value=""
+                                                                                placeholder="Fakultas Ekonomi dan Bisnis"
+                                                                                class="form-control"
+                                                                                id="pay-amount-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <button type="submit"
+                                                                            class="btn btn-lg btn-primary"
+                                                                            style="background-color:#31b401; border:none">Simpan
+                                                                            Informasi</button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="card h-100">
+                                                    <div class="card-inner">
+                                                        <div class="card-head">
+                                                            <h5 class="card-title">Data Ketua</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <ul>
+                                                                <li>- Program Studi :
+                                                                    <span class="text-danger">Belum Lengkap</span>
+                                                                </li>
+                                                                <li>- Fakultas :
+                                                                    <span class="text-danger">Belum Lengkap</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
-
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <div class="form-group"><button type="submit"
-                                                            class="btn btn-lg btn-primary"
-                                                            style="background-color: #31b401; border:#31b401">Simpan
-                                                            Informasi</button></div>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div><!-- .nk-block -->
+                                </div><!-- .nk-block -->
 
-                            </div>
+
+
+                            </div><!-- .components-preview -->
 
                         </div>
                     </div>
