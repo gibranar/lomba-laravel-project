@@ -29,26 +29,11 @@ class ForgotPasswordController extends Controller
                 ->subject('Password Reset');
         });
 
-        return redirect()->route('forgot.password')->with('success', 'Email has been sent successfully');
+        return back()->with('success', 'Email has been sent successfully');
     }
 
     public function reset(Request $request)
     {
-        $request->validate([
-            'token' => 'required',
-            'password' => 'required|confirmed|min:8',
-        ]);
-
-        $user = User::where('reset_token', $request->token)->first();
-
-        if (!$user) {
-            return redirect()->route('login')->with('error', 'Invalid token.');
-        }
-
-        $user->password = Hash::make($request->password);
-        $user->reset_token = null;
-        $user->save();
-
-        return redirect()->route('login')->with('success', 'Password updated successfully.');
+        // 
     }
 }
