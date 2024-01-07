@@ -21,12 +21,16 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/index')->with('loginSuccess', 'Login Success');
+            return redirect('/dashboard')->with('loginSuccess', 'Login Success');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function dashboard() {
+        return view('users.dashboard');
     }
 
     public function logout()
