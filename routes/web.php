@@ -60,6 +60,9 @@ Route::get('/admin/users', function () {
     return view('admin.users');
 })->name('admin.users');
 
+Route::get('/admin2', function () {
+    return view('admin.dashboard2');
+})->name('admin.dashboard2');
 
 
 Route::controller(ForgotPasswordController::class)->group(function () {
