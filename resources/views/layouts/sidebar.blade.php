@@ -1,31 +1,79 @@
-<aside id="sidebar-wrapper">
-    <div class="sidebar-brand">
-        <a href="index.html">Stisla</a>
+<body id="body-pd">
+   
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <i class="bx bx-layer nav_logo-icon"></i>
+                    <span class="nav_logo-name">BBBootstrap</span>
+                </a>
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class="bx bx-grid-alt nav_icon"></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-user nav_icon"></i>
+                        <span class="nav_name">Users</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-message-square-detail nav_icon"></i>
+                        <span class="nav_name">Messages</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-bookmark nav_icon"></i>
+                        <span class="nav_name">Bookmark</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-folder nav_icon"></i>
+                        <span class="nav_name">Files</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
+                        <span class="nav_name">Stats</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="bx bx-log-out nav_icon"></i>
+                <span class="nav_name">SignOut</span>
+            </a>
+        </nav>
     </div>
-    <div class="sidebar-brand sidebar-brand-sm">
-        <a href="#">St</a>
-    </div>
-    <ul class="sidebar-menu">
-        <li class="menu-header">Menu</li>
-        <li class="">
-            <a href="" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-        </li>
-        <li class="">
-            <a href="" class="nav-link"><i class="fas fa-box"></i><span>Product</span></a>
-        </li>
-        @role('admin')
-        <li class="">
-            <a href="" class="nav-link"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
-        </li>
-        <li class="">
-            <a href="" class="nav-link"><i class="fas fa-user"></i><span>User</span></a>
-        </li>
-        @endrole
-        <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
-    </ul>
-    <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-            <i class="fas fa-rocket"></i> Documentation
-        </a>
-    </div>
-</aside>
+   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                const toggle = document.getElementById(toggleId),
+                    nav = document.getElementById(navId),
+                    bodypd = document.getElementById(bodyId),
+                    headerpd = document.getElementById(headerId)
+
+                if (toggle && nav && bodypd && headerpd) {
+                    toggle.addEventListener('click', () => {
+                        nav.classList.toggle('show')
+                        toggle.classList.toggle('bx-x')
+                        bodypd.classList.toggle('body-pd')
+                        headerpd.classList.toggle('body-pd')
+                    })
+                }
+            }
+
+            showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+            const linkColor = document.querySelectorAll('.nav_link')
+
+            function colorLink() {
+                if (linkColor) {
+                    linkColor.forEach(l => l.classList.remove('active'))
+                    this.classList.add('active')
+                }
+            }
+            linkColor.forEach(l => l.addEventListener('click', colorLink))
+        });
+    </script>
+</body>
+
+</html>

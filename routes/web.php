@@ -33,7 +33,6 @@ Route::get('/reset/{token}', function ($token) {
     return view('auth.reset', ['token' => $token]);
 })->name('forgot.password');
 
-
 // USERS ROUTE START
 Route::get('/dashboard', function () {
     return view('users.dashboard');
@@ -52,6 +51,16 @@ Route::get('/team', function () {
 })->name('users.team')->middleware('auth');
 // USERS ROUTE END
 
+// Route Admin
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
+Route::get('/admin/users', function () {
+    return view('admin.users');
+})->name('admin.users');
+
+
 
 Route::controller(ForgotPasswordController::class)->group(function () {
     Route::post('/forgotPassword', 'sendEmail')->name('forgot.password.send');
@@ -68,3 +77,5 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/login', 'showLoginForm')->name('login');
     Route::post('/register', 'store')->name('users.store');
 });
+
+
