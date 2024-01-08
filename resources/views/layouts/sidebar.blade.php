@@ -1,8 +1,3 @@
-    <style>
-       
-    </style>
-</head>
-
 <body id="body-pd">
    
     <div class="l-navbar" id="nav-bar">
