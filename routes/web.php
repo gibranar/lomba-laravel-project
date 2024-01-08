@@ -34,25 +34,25 @@ Route::get('/reset/{token}', function ($token) {
 })->name('forgot.password');
 
 // USERS ROUTE START
-Route::get('/dashboard', function () {
+Route::get('/users/dashboard', function () {
     return view('users.dashboard');
 })->name('users.dashboard')->middleware('auth');
 
-Route::get('/pt', function () {
+Route::get('/users/pt', function () {
     return view('users.perguruan_tinggi');
 })->name('users.pt')->middleware('auth');
 
-Route::get('/profile', function () {
+Route::get('/users/profile', function () {
     return view('users.profile');
 })->name('users.profile')->middleware('auth');
 
-Route::get('/team', function () {
+Route::get('/users/team', function () {
     return view('users.team');
 })->name('users.team')->middleware('auth');
 // USERS ROUTE END
 
 // Route Admin
-Route::get('/admin', function () {
+Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->name('admin.dashboard');
 
