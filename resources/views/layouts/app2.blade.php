@@ -10,8 +10,8 @@
 
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="../lib/reasseticon/fonts/reasseticon.css" />
-    <link rel="stylesheet" href="../lib/jqvmap/jqvmap.min.css" />
+    <link rel="stylesheet" href="{{asset('lib/reasseticon/fonts/reasseticon.css')}}" /> 
+    <link rel="stylesheet" href="{{asset('lib/jqvmap/jqvmap.min.css') }}" />
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}" />
@@ -182,7 +182,7 @@
                         <ol class="breadcrumb fs-sm mb-1">
                             <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Sales Monitoring
+                                Dashboard
                             </li>
                         </ol>
                         @yield('content')
